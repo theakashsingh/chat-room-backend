@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-chatModel = mongoose.Schema(
+const chatModel = mongoose.Schema(
   {
     chatName: { type: String, trim: true },
     isGroupChat: { type: Boolean, default: false },
