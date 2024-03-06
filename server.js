@@ -29,7 +29,7 @@ const server = app.listen(5000, console.log(`Server started on PORT ${port}`));
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://chitchatroom.netlify.app/",
   },
 });
 
