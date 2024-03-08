@@ -6,8 +6,15 @@ import chatRoutes from "./routes/chatRoutes.js";
 import messageRoutes from "./routes/messageRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 import { Server } from "socket.io";
-
+import cors from "cors";
 dotenv.config();
+
+const corsOptions = {
+  origin: "https://chitchatroom.netlify.app/",
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 connectDB();
 const app = express();
