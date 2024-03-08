@@ -9,6 +9,11 @@ import { Server } from "socket.io";
 import cors from "cors";
 dotenv.config();
 
+
+
+connectDB();
+const app = express();
+
 const corsOptions = {
   origin: "https://chitchatroom.netlify.app/",
   optionsSuccessStatus: 200,
@@ -16,8 +21,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-connectDB();
-const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
