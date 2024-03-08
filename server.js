@@ -15,7 +15,7 @@ connectDB();
 const app = express();
 
 const corsOptions = {
-  origin: "https://chitchatroom.netlify.app/",
+  origin: "https://chitchatroom.netlify.app",
   optionsSuccessStatus: 200,
 };
 
@@ -39,7 +39,7 @@ const server = app.listen(port, console.log(`Server started on PORT ${port}`));
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://chitchatroom.netlify.app/",
+    origin: "https://chitchatroom.netlify.app",
   },
 });
 
